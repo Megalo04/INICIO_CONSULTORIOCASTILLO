@@ -27,12 +27,18 @@ function Header() {
         }
     };
 
+    // Función para reservar cita
+    const reservarCita = () => {
+        // Implementar lógica para reservar la cita
+        console.log('Reservar cita');
+    };
+
     return (
         <Navbar expand="lg" variant="dark" className={isSticky ? 'sticky-top' : ''} style={{ backgroundColor: '#22AED1', transition: '0.3s ease-in-out' }}>
             <Container>
                 <Navbar.Brand href="#" className="d-flex align-items-center">
                     <img
-                        src="https://i.imgur.com/JeZJuDo.png"  // Nueva imagen
+                        src="https://i.imgur.com/JeZJuDo.png"
                         height="40"
                         className="d-inline-block align-top mr-2"
                         alt="Consultorio Castillo Logo"
@@ -46,9 +52,9 @@ function Header() {
                     </Nav>
                     <Nav className="mx-auto">
                         {/* Botones en el centro (Preguntas Frecuentes, Misión, Visión, Contáctanos) */}
-                        <Button 
-                            variant="link" 
-                            className="text-white mx-2" 
+                        <Button
+                            variant="link"
+                            className="text-white mx-2"
                             onClick={() => scrollToSection('preguntas-frecuentes')}
                             style={{ textDecoration: 'none', fontWeight: 'normal' }}
                             onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
@@ -57,9 +63,9 @@ function Header() {
                             Preguntas Frecuentes
                         </Button>
                         <span className="text-white mx-2 d-flex align-items-center">|</span>
-                        <Button 
-                            variant="link" 
-                            className="text-white mx-2" 
+                        <Button
+                            variant="link"
+                            className="text-white mx-2"
                             onClick={() => scrollToSection('mision-vision')}
                             style={{ textDecoration: 'none', fontWeight: 'normal' }}
                             onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
@@ -68,15 +74,28 @@ function Header() {
                             Misión y Visión
                         </Button>
                         <span className="text-white mx-2 d-flex align-items-center">|</span>
-                        <Button 
-                            variant="link" 
-                            className="text-white mx-2" 
+                        <Button
+                            variant="link"
+                            className="text-white mx-2"
                             onClick={() => scrollToSection('contactanos')}
                             style={{ textDecoration: 'none', fontWeight: 'normal' }}
                             onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
                             onMouseLeave={(e) => e.target.style.fontWeight = 'normal' }
                         >
                             Contáctanos
+                        </Button>
+                        {/* Separador después de "Contáctanos" */}
+                        <span className="text-white mx-2 d-flex align-items-center">|</span>
+                        {/* Botón "Reservar Cita" a la derecha de "Contáctanos" */}
+                        <Button
+                            variant="link"
+                            className="text-white mx-2"
+                            onClick={reservarCita}
+                            style={{ textDecoration: 'none', fontWeight: 'normal' }}
+                            onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
+                            onMouseLeave={(e) => e.target.style.fontWeight = 'normal' }
+                        >
+                            Reservar Cita
                         </Button>
                     </Nav>
                     <Nav className="ml-auto">

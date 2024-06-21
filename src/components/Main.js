@@ -58,15 +58,7 @@ function Main() {
         <div className="col-md-6">
             <h2>Hola, soy el doctor Walter Castillo</h2>
             <p>
-            Me complace darle la bienvenida a mi consultorio médico. Con una dedicación incansable hacia el cuidado de la salud y el bienestar de mis pacientes, mi equipo y yo nos esforzamos por proporcionar atención médica integral y personalizada a cada persona que nos visita.
-
-            En nuestro consultorio, nos comprometemos a crear un ambiente acogedor y comprensivo, donde usted se sienta cómodo y seguro mientras abordamos sus preocupaciones de salud. Desde exámenes de rutina hasta tratamientos especializados, estamos aquí para brindarle el más alto nivel de atención médica, combinando conocimientos actualizados con un enfoque empático y compasivo.
-
-            En cada consulta, nos esforzamos por establecer una relación de confianza con nuestros pacientes, escuchando atentamente sus inquietudes y trabajando juntos para desarrollar planes de tratamiento que se adapten a sus necesidades individuales. Su salud y bienestar son nuestra máxima prioridad, y estamos aquí para apoyarlo en cada paso del camino.
-
-            Gracias por confiar en nosotros con su cuidado médico. Esperamos poder acompañarlo en su viaje hacia una vida más saludable y feliz.
-
-            ¡Bienvenido a nuestro consultorio!
+            ¡Hola! Soy el doctor Walter Castillo, y le doy la bienvenida a mi consultorio médico. Aquí, nos dedicamos a su bienestar con atención personalizada y comprensiva. Estamos comprometidos a brindarle la mejor atención médica, enfocada en sus necesidades individuales. ¡Gracias por confiar en nosotros con su salud!
             </p>
         </div>
     </div>
