@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Foto 1",
+        "slug": "img-1",
+        "description": "Con su sonrisa sarcástica y sus ojos saltones, el peluche de Pepinillo Rick es una fiel réplica del personaje favorito de la serie animada. Confeccionado con materiales suaves y de alta calidad, este peluche es perfecto para abrazar en esas noches de maratón de episodios de Rick y Morty, añadiendo un toque de diversión a cualquier colección.",
+        "picture": "https://i.etsystatic.com/24163036/r/il/ac5a89/4668936625/il_570xN.4668936625_skua.jpg"
+    },
+    {
+        "name": "Foto 2",
+        "slug": "img-2",
+        "description": "El peluche de Pepinillo Rick es la combinación perfecta de adorable y atrevido. Con sus brazos delgados y su cuerpo verde vibrante, este juguete de peluche captura la esencia del icónico personaje de la serie. Ya sea para regalar a un amigo fanático de la serie o para exhibir en tu estantería, este peluche seguro que hará reír a todos los que lo vean.",
+        "picture": "https://m.media-amazon.com/images/I/613wIz9vlHL.jpg"
+    },
+    {
+        "name": "Foto 3",
+        "slug": "img-3",
+        "description": "¡Prepárate para las aventuras intergalácticas con el peluche de Pepinillo Rick! Este compañero de felpa lleva consigo todo el ingenio y el humor ácido del personaje animado. Sus detalles intrincados y su tamaño perfecto lo convierten en el accesorio ideal para cualquier fan de Rick y Morty que quiera llevar un poco de diversión a todas partes.",
+        "picture": "https://i.etsystatic.com/24163036/r/il/efa407/4620693818/il_570xN.4620693818_i9du.jpg"
+    },
+    {
+        "name": "Foto 4",
+        "slug": "img-4",
+        "description": "¡La locura llega en forma de peluche con Pepinillo Rick! Con su expresión desafiante y su forma peculiar, este peluche es una adición única a cualquier colección de merchandising de Rick y Morty. Hecho con materiales duraderos y diseñado con precisión, este peluche es tanto un artículo de colección como un juguete adorable para fans de todas las edades.",
+        "picture": "https://m.media-amazon.com/images/I/711fwUVvb3L.jpg"
+    }
+]
