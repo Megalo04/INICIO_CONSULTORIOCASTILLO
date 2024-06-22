@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Carousel, Container, Card, Button } from 'react-bootstrap';
 import Fotos from './data/fotos.json';
+import AccordionItem from './AccordionItem';
 
 function Main() {
-    const [activeKey, setActiveKey] = useState(null);
+    const [activeKeys, setActiveKeys] = useState({});
 
     const toggleAccordion = (key) => {
-        setActiveKey(activeKey === key ? null : key);
+        setActiveKeys(prevActiveKeys => ({
+            ...prevActiveKeys,
+            [key]: !prevActiveKeys[key]
+        }));
     };
 
     return (
@@ -61,68 +65,116 @@ function Main() {
             />
         </div>
         <div className="col-md-6">
+        <section id="quienes-somos" className="mt-5">
             <h2>Hola, soy el doctor Walter Castillo</h2>
             <p>
             ¡Hola! Soy el doctor Walter Castillo, y le doy la bienvenida a mi consultorio médico. Aquí, nos dedicamos a su bienestar con atención personalizada y comprensiva. Estamos comprometidos a brindarle la mejor atención médica, enfocada en sus necesidades individuales. ¡Gracias por confiar en nosotros con su salud!
             </p>
+            </section>
         </div>
     </div>
 </div>
 
 
 
-<section id="preguntas-frecuentes" className="mt-5">
-    <h2>Preguntas Frecuentes</h2>
-    <div className="accordion" id="faqAccordion">
-        <div
-            className="card"
-            onClick={() => toggleAccordion(0)}
-            style={{ cursor: 'pointer' }}
-        >
-            <div className="card-header bg-info" id="faqHeading1">
-                <button
-                    className="btn btn-link text-dark font-weight-bold"
-                    type="button"
-                    style={{ textDecoration: 'none', display: 'block', width: '100%', textAlign: 'left' }}
-                    data-toggle="collapse"
-                    data-target="#faqCollapse1"
-                    aria-expanded={activeKey === 0 ? "true" : "false"}
-                    aria-controls="faqCollapse1"
-                >
-                    ¿Cuál es el horario de atención?
-                </button>
-            </div>
-            <div
-                id="faqCollapse1"
-                className={activeKey === 0 ? "collapse show" : "collapse"}
-                aria-labelledby="faqHeading1"
-                data-parent="#faqAccordion"
-            >
-                <div className="card-body">
-                    Nuestro horario de atención es de lunes a viernes, de 8:00 AM a 5:00 PM, y los sábados de 9:00 AM a 1:00 PM.
+        <section id="preguntas-frecuentes" className="mt-5">
+            <div className="row">
+                <div className="col-md-4">
+                    <AccordionItem 
+                        active={activeKeys[11]} 
+                        toggleAccordion={() => toggleAccordion(11)} 
+                        question="Misión"
+                        answer="Nuestra misión es proporcionar atención médica integral y de calidad, centrada en el paciente, promoviendo su bienestar físico, emocional y social en un ambiente cálido y acogedor. Nos comprometemos a ofrecer soluciones médicas efectivas y humanizadas, manteniendo la compasión y la dedicación como pilares fundamentales de nuestra práctica."
+                    />
+                </div>
+                <div className="col-md-4">
+                    <AccordionItem 
+                        active={activeKeys[22]} 
+                        toggleAccordion={() => toggleAccordion(22)} 
+                        question="Visión"
+                        answer="Ser reconocidos como líderes indiscutibles en la prestación de servicios médicos de excelencia, destacándonos por nuestra dedicación incansable a la innovación, la mejora continua y el cuidado integral del paciente. Aspiramos a ser el referente insuperable en nuestra comunidad, ofreciendo soluciones médicas efectivas, humanizadas y vanguardistas"
+                    />
+                </div>
+                <div className="col-md-4">
+                    <AccordionItem 
+                        active={activeKeys[33]} 
+                        toggleAccordion={() => toggleAccordion(33)} 
+                        question="Valores"
+                        answer="En nuestro consultorio médico, nos guiamos por la compasión hacia nuestros pacientes, la integridad en nuestra práctica profesional, la colaboración en nuestro equipo, y la innovación en la mejora continua de nuestros servicios médicos. Estos valores fundamentales son la base de nuestra relación con los pacientes y colegas, y guían cada aspecto de nuestra práctica médica."
+                    />
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
+        <div className="my-5"></div>
 
+        
+            <h2>Preguntas Frecuentes</h2>
+            <div className="accordion" id="faqAccordion">
+                <AccordionItem 
+                    active={activeKeys[0]} 
+                    toggleAccordion={() => toggleAccordion(0)} 
+                    question="¿Cuál es el horario de atención?"
+                    answer="Nuestro horario de atención es de lunes a viernes, de 8:00 AM a 5:00 PM, y los sábados de 9:00 AM a 1:00 PM."
+                />
+                <AccordionItem 
+                    active={activeKeys[1]} 
+                    toggleAccordion={() => toggleAccordion(1)} 
+                    question="¿Cómo puedo agendar una cita?"
+                    answer="Puedes agendar una cita llamando a nuestro consultorio o usando nuestro sistema de citas en línea en nuestra página web."
+                />
+                <AccordionItem 
+                    active={activeKeys[2]} 
+                    toggleAccordion={() => toggleAccordion(2)} 
+                    question="¿Qué documentos necesito llevar a mi primera consulta?"
+                    answer="Por favor, trae tu identificación, tarjeta de seguro médico (si tienes), y cualquier registro médico relevante."
+                />
+                <AccordionItem 
+                    active={activeKeys[3]} 
+                    toggleAccordion={() => toggleAccordion(3)} 
+                    question="¿Aceptan seguros médicos? ¿Cuáles?"
+                    answer="Sí, aceptamos varios seguros médicos. Por favor, contáctanos para verificar si aceptamos tu seguro específico."
+                />
+                <AccordionItem 
+                    active={activeKeys[4]} 
+                    toggleAccordion={() => toggleAccordion(4)} 
+                    question="¿Cuál es la política de cancelación de citas?"
+                    answer="Agradecemos un aviso de al menos 24 horas antes de cancelar una cita para que podamos programar a otro paciente en ese horario."
+                />
+                <AccordionItem 
+                    active={activeKeys[5]} 
+                    toggleAccordion={() => toggleAccordion(5)} 
+                    question="¿Qué tipos de tratamientos y servicios ofrecen?"
+                    answer="Ofrecemos una amplia gama de tratamientos médicos, incluyendo exámenes de rutina, consultas de especialistas, vacunas, y más."
+                />
+                <AccordionItem 
+                    active={activeKeys[7]} 
+                    toggleAccordion={() => toggleAccordion(7)} 
+                    question="¿Cómo puedo obtener una receta médica?"
+                    answer="Puedes obtener una receta médica durante tu consulta con nuestro médico o solicitándola a través de nuestro portal en línea."
+                />
+                <AccordionItem 
+                    active={activeKeys[8]} 
+                    toggleAccordion={() => toggleAccordion(8)} 
+                    question="¿Realizan pruebas de laboratorio en el consultorio?"
+                    answer="Sí, realizamos algunas pruebas de laboratorio en el consultorio. Para pruebas más especializadas, colaboramos con laboratorios externos."
+                />
+                <AccordionItem 
+                    active={activeKeys[9]} 
+                    toggleAccordion={() => toggleAccordion(9)} 
+                    question="¿Cómo puedo acceder a mis resultados médicos?"
+                    answer="Puedes acceder a tus resultados médicos a través de nuestro portal en línea o llamando a nuestro consultorio y solicitándolos."
+                />
+                <AccordionItem 
+                    active={activeKeys[10]} 
+                    toggleAccordion={() => toggleAccordion(10)} 
+                    question="¿Qué debo hacer en caso de una emergencia médica?"
+                    answer="En caso de una emergencia médica, llama al número de emergencias de tu área o dirígete al hospital más cercano. Si es posible, contáctanos después para que podamos seguir tu caso."
+                />
 
-
-            
-            
-
-            <section id="mision-vision">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Aquí estarán las preguntas frecuentes y sus respuestas.</p>
-            </section>
-
-
-
-            <section id="contactanos">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Aquí estarán las preguntas frecuentes y sus respuestas.</p>
-            </section>
+            </div>
+        
+          
 
         </Container>
 
