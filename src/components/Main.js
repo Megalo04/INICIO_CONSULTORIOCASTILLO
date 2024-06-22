@@ -16,7 +16,7 @@ function Main() {
     return (
         <Container style={{ padding: '20px' }}>
             <section id="inicio">
-                <h1>Bienvenido al CONSULTORIO CASTILLO</h1>
+                <h1>Bienvenido al CONSULTORIO CASTILLO!!!!!!!!!!</h1>
             </section>
 
             <Carousel>
