@@ -69,24 +69,28 @@ function Main() {
     </div>
 </div>
 
-            <section id="preguntas-frecuentes">
-            <h2 className="mb-4">Preguntas Frecuentes</h2>
+
+
+<section id="preguntas-frecuentes" className="mt-5">
+    <h2>Preguntas Frecuentes</h2>
     <div className="accordion" id="faqAccordion">
-        <div className="card">
-            <div className="card-header bg-light" id="faqHeading1">
-                <h5 className="mb-0">
-                    <button
-                        className="btn btn-link text-dark"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#faqCollapse1"
-                        aria-expanded={activeKey === 0 ? "true" : "false"}
-                        aria-controls="faqCollapse1"
-                        onClick={() => toggleAccordion(0)}
-                    >
-                        ¿Cuál es el horario de atención?
-                    </button>
-                </h5>
+        <div
+            className="card"
+            onClick={() => toggleAccordion(0)}
+            style={{ cursor: 'pointer' }}
+        >
+            <div className="card-header bg-info" id="faqHeading1">
+                <button
+                    className="btn btn-link text-dark font-weight-bold"
+                    type="button"
+                    style={{ textDecoration: 'none', display: 'block', width: '100%', textAlign: 'left' }}
+                    data-toggle="collapse"
+                    data-target="#faqCollapse1"
+                    aria-expanded={activeKey === 0 ? "true" : "false"}
+                    aria-controls="faqCollapse1"
+                >
+                    ¿Cuál es el horario de atención?
+                </button>
             </div>
             <div
                 id="faqCollapse1"
@@ -100,7 +104,11 @@ function Main() {
             </div>
         </div>
     </div>
-            </section>
+</section>
+
+
+
+
             
             
 
