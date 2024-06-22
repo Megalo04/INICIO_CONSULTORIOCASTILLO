@@ -51,7 +51,18 @@ function Header() {
                         {/* Botones a la izquierda (Logo y nombre del consultorio) */}
                     </Nav>
                     <Nav className="mx-auto">
-                        {/* Botones en el centro (Preguntas Frecuentes, Misión, Visión, Contáctanos) */}
+                        {/* Botones en el centro (¿Quiénes Somos?, Preguntas Frecuentes, Contáctanos, Reservar Cita) */}
+                        <Button
+                            variant="link"
+                            className="text-white mx-2"
+                            onClick={() => scrollToSection('quienes-somos')}
+                            style={{ textDecoration: 'none', fontWeight: 'normal' }}
+                            onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
+                            onMouseLeave={(e) => e.target.style.fontWeight = 'normal' }
+                        >
+                            ¿Quiénes Somos?
+                        </Button>
+                        <span className="text-white mx-2 d-flex align-items-center">|</span>
                         <Button
                             variant="link"
                             className="text-white mx-2"
@@ -66,17 +77,6 @@ function Header() {
                         <Button
                             variant="link"
                             className="text-white mx-2"
-                            onClick={() => scrollToSection('mision-vision')}
-                            style={{ textDecoration: 'none', fontWeight: 'normal' }}
-                            onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
-                            onMouseLeave={(e) => e.target.style.fontWeight = 'normal' }
-                        >
-                            Misión y Visión
-                        </Button>
-                        <span className="text-white mx-2 d-flex align-items-center">|</span>
-                        <Button
-                            variant="link"
-                            className="text-white mx-2"
                             onClick={() => scrollToSection('contactanos')}
                             style={{ textDecoration: 'none', fontWeight: 'normal' }}
                             onMouseEnter={(e) => e.target.style.fontWeight = 'bold'}
@@ -84,9 +84,7 @@ function Header() {
                         >
                             Contáctanos
                         </Button>
-                        {/* Separador después de "Contáctanos" */}
                         <span className="text-white mx-2 d-flex align-items-center">|</span>
-                        {/* Botón "Reservar Cita" a la derecha de "Contáctanos" */}
                         <Button
                             variant="link"
                             className="text-white mx-2"

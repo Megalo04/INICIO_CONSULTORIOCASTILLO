@@ -1,9 +1,14 @@
-import { Carousel } from 'react-bootstrap';
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import Fotos from './data/fotos.json'
+import React, { useState } from 'react';
+import { Carousel, Container, Card, Button } from 'react-bootstrap';
+import Fotos from './data/fotos.json';
 
 function Main() {
+    const [activeKey, setActiveKey] = useState(null);
+
+    const toggleAccordion = (key) => {
+        setActiveKey(activeKey === key ? null : key);
+    };
+
     return (
         <Container style={{ padding: '20px' }}>
             <section id="inicio">
@@ -64,10 +69,37 @@ function Main() {
     </div>
 </div>
 
-
             <section id="preguntas-frecuentes">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Aquí estarán las preguntas frecuentes y sus respuestas.</p>
+            <h2 className="mb-4">Preguntas Frecuentes</h2>
+    <div className="accordion" id="faqAccordion">
+        <div className="card">
+            <div className="card-header bg-light" id="faqHeading1">
+                <h5 className="mb-0">
+                    <button
+                        className="btn btn-link text-dark"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#faqCollapse1"
+                        aria-expanded={activeKey === 0 ? "true" : "false"}
+                        aria-controls="faqCollapse1"
+                        onClick={() => toggleAccordion(0)}
+                    >
+                        ¿Cuál es el horario de atención?
+                    </button>
+                </h5>
+            </div>
+            <div
+                id="faqCollapse1"
+                className={activeKey === 0 ? "collapse show" : "collapse"}
+                aria-labelledby="faqHeading1"
+                data-parent="#faqAccordion"
+            >
+                <div className="card-body">
+                    Nuestro horario de atención es de lunes a viernes, de 8:00 AM a 5:00 PM, y los sábados de 9:00 AM a 1:00 PM.
+                </div>
+            </div>
+        </div>
+    </div>
             </section>
             
             
@@ -89,5 +121,4 @@ function Main() {
 
     );
 }
-
 export default Main;
