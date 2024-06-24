@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Carousel, Container, Card, Button } from 'react-bootstrap';
-import Fotos from './data/fotos.json';
 import AccordionItem from './AccordionItem';
 
 function Main() {

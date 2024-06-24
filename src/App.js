@@ -6,6 +6,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Register from './components/Register';
 import Login from './components/Login';
+import Reservar from './components/Reservar';
 import EditProfile from './components/EditProfile'; 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
                     </Container>} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/Login" element={<Login />} />
+                    <Route path="/Reservar" element={<Reservar />} />
                 </Routes>
                 <Footer />
             </>

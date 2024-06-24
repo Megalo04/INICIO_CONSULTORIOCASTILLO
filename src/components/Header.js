@@ -94,6 +94,7 @@ function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
                         </Button>
                         <span className="text-white d-flex align-items-center mx-1">|</span>
                         
+                        <Link to="/Reservar">
                         <Button
                             variant="link"
                             className="text-white mx-2"
@@ -104,6 +105,8 @@ function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
                         >
                             Reservar Cita
                         </Button>
+                        </Link>
+
                     </Nav>
                     <Nav className="ml-auto">
                         {/* Condición para mostrar el menú desplegable */}
