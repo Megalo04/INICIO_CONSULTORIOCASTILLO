@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import EditProfile from './components/EditProfile';
+import Register from './components/Register';
+import Login from './components/Login';
+import EditProfile from './components/EditProfile'; 
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticación
@@ -31,17 +34,23 @@ function App() {
     };
 
     return (
-        <>
-            <Header isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} onEditProfile={handleEditProfile} />
-            <Container fluid style={{ padding: '20px', backgroundColor: '#FFFFFF' }}>
-                {showEditProfile ? (
-                    <EditProfile onClose={handleCloseEditProfile} />
-                ) : (
-                    <Main />
-                )}
-            </Container>
-            <Footer />
-        </>
+        <Router>
+            <>
+                <Header isLoggedIn={isLoggedIn} onLogin={handleLogin} onLogout={handleLogout} onEditProfile={handleEditProfile} />
+                <Routes>
+                    <Route path="/" element={<Container fluid style={{ padding: '20px', backgroundColor: '#FFFFFF' }}>
+                        {showEditProfile ? (
+                            <EditProfile onClose={handleCloseEditProfile} />
+                        ) : (
+                            <Main />
+                        )}
+                    </Container>} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/Login" element={<Login />} />
+                </Routes>
+                <Footer />
+            </>
+        </Router>
     );
 }
 

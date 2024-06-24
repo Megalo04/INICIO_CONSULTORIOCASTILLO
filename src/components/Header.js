@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button, Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
     const [isSticky, setSticky] = useState(false);
@@ -9,7 +10,7 @@ function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
         const handleScroll = () => {
             setSticky(window.scrollY > 50);
         };
-
+        
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -92,6 +93,7 @@ function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
                             Contáctanos
                         </Button>
                         <span className="text-white d-flex align-items-center mx-1">|</span>
+                        
                         <Button
                             variant="link"
                             className="text-white mx-2"
@@ -117,7 +119,9 @@ function Header({ isLoggedIn, onLogin, onLogout, onEditProfile }) {
                             </Dropdown>
                         ) : (
                             <>
+                            <Link to="/Register">
                                 <Button variant="outline-light" className="mx-2">Registrarse</Button>
+                                </Link>
                                 <Button variant="outline-light" className="mx-2" onClick={onLogin}>Iniciar Sesión</Button>
                             </>
                         )}
