@@ -21,7 +21,7 @@ function Main() {
             <Carousel>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
                         src="https://www.hospitaldechancay.gob.pe/files/Consultorio(1).jpg"
                         alt="Primera foto"
                     />
@@ -32,7 +32,7 @@ function Main() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
                         src="https://growmedical.org/wp-content/uploads/2021/12/Consultorio-medico-3-702x526.jpg"
                         alt="Segunda foto"
                     />
@@ -43,13 +43,24 @@ function Main() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
                         src="https://growmedical.org/wp-content/uploads/2021/12/Consulorio-medico-1.jpg"
                         alt="Tercera foto"
                     />
                     <Carousel.Caption>
                         <h3>Foto 3</h3>
                         <p>Equipamento del consultorio</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
+                        src="https://img.freepik.com/fotos-premium/doctor-feliz-manos-pacientes-mayores_13339-107592.jpg"
+                        alt="cuarta foto"
+                    />
+                    <Carousel.Caption>
+                        <h3>Foto 4</h3>
+                        <p>Pacientes felices</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
