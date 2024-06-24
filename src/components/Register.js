@@ -182,7 +182,7 @@ const Register = () => {
                                                     </div>
                                                     <div className="col-md-1">
                                                         <p style={{ marginBottom: '5px' }}></p>
-                                                        <i className="feather" data-feather="calendar" style={{ width: '25px', height: '25px' }}></i>
+                                                        <i className="feather" data-feather="calendar" style={{ fontSize: '20px', border: '1px solid black', padding: '5px', borderRadius: '50%' }}></i>
                                                     </div>
                                                 </div>
                                             </div>

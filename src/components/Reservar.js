@@ -142,7 +142,7 @@ const Reservar = () => {
                                         <div className='row align-items-center'>
                                             <div className='col-md-2'> </div>
                                             <div className='col-md-5 mx-auto'>
-                                                <Link to="/" className="btn btn-primary" role="button">Ir a pagar</Link>
+                                                <Link to="/PaymentGateway" className="btn btn-primary" role="button">Ir a pagar</Link>
                                             </div>
                                         </div>
                                         

@@ -8,6 +8,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Reservar from './components/Reservar';
 import EditProfile from './components/EditProfile'; 
+import PaymentGateway from './components/PaymentGateway';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticación
@@ -49,6 +50,7 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/Login" element={<Login />} />
                     <Route path="/Reservar" element={<Reservar />} />
+                    <Route path="/PaymentGateway" element={<PaymentGateway />} />
                 </Routes>
                 <Footer />
             </>
