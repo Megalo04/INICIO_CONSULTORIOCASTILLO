@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 import AccordionItem from './AccordionItem';
+import './CarouselCustom.css'
 
 function Main() {
     const [activeKeys, setActiveKeys] = useState({});
@@ -14,56 +15,56 @@ function Main() {
 
     return (
         <Container style={{ padding: '20px' }}>
-            <section id="inicio">
+            <section id="inicio" className="welcome-section">
                 <h1>BIENVENIDO AL CONSULTORIO CASTILLO</h1>
             </section>
 
             <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
-                        src="https://www.hospitaldechancay.gob.pe/files/Consultorio(1).jpg"
-                        alt="Primera foto"
-                    />
-                    <Carousel.Caption>
-                        <h3>Foto 1</h3>
-                        <p>Inicios del consultorio</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
-                        src="https://growmedical.org/wp-content/uploads/2021/12/Consultorio-medico-3-702x526.jpg"
-                        alt="Segunda foto"
-                    />
-                    <Carousel.Caption>
-                        <h3>Foto 2</h3>
-                        <p>Evolución del consultorio</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
-                        src="https://growmedical.org/wp-content/uploads/2021/12/Consulorio-medico-1.jpg"
-                        alt="Tercera foto"
-                    />
-                    <Carousel.Caption>
-                        <h3>Foto 3</h3>
-                        <p>Equipamento del consultorio</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-75 mx-auto" // Cambiado el ancho a w-75 (75% del contenedor)
-                        src="https://img.freepik.com/fotos-premium/doctor-feliz-manos-pacientes-mayores_13339-107592.jpg"
-                        alt="cuarta foto"
-                    />
-                    <Carousel.Caption>
-                        <h3>Foto 4</h3>
-                        <p>Pacientes felices</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <Carousel.Item>
+                <img
+                    className="d-block custom-size mx-auto"
+                    src="https://i.imgur.com/3vMGfgq.jpeg"
+                    alt="Primera foto"
+                />
+                <Carousel.Caption>
+                    <h3>Consultorio Castillo</h3>
+                    <p>Tu salud es lo primero</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block custom-size mx-auto"
+                    src="https://growmedical.org/wp-content/uploads/2021/12/Consultorio-medico-3-702x526.jpg"
+                    alt="Segunda foto"
+                />
+                <Carousel.Caption>
+                    <h3>Gran trayectoria</h3>
+                    <p>Cuidando de usted por casi 20 años</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block custom-size mx-auto"
+                    src="https://growmedical.org/wp-content/uploads/2021/12/Consulorio-medico-1.jpg"
+                    alt="Tercera foto"
+                />
+                <Carousel.Caption>
+                    <h3>Equipamiento de primera</h3>
+                    <p>Contamos con equipo de la mejor calidad</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block custom-size mx-auto"
+                    src="https://img.freepik.com/fotos-premium/doctor-feliz-manos-pacientes-mayores_13339-107592.jpg"
+                    alt="cuarta foto"
+                />
+                <Carousel.Caption>
+                    <h3>Nuestro compromiso</h3>
+                    <p>Priorizar la salud de nuestros pacientes</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
 
             <div className="container mt-5">
                 <div className="row">

@@ -1,0 +1,33 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con opacidad para sombreado */
+    color: #fff; /* Texto en blanco */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Invertir colores para hacer las flechas blancas */
+}
+
+.welcome-section {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem; /* Tamaño de fuente más grande */
+    color: #22AED1; /* Color del texto azul */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para el texto */
+    padding: 20px;
+    border: 2px solid #22AED1; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+}
+
+.custom-size {
+    width: 850px;
+    height: 600px;
+    object-fit: cover; /* Esto asegura que las imágenes mantengan su proporción y rellenen el tamaño especificado */
+}
